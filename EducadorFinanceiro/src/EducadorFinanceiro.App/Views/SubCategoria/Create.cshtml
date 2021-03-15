@@ -1,0 +1,44 @@
+﻿@model EducadorFinanceiro.App.ViewModels.SubCategoriaViewModel
+
+@{ ViewData["Title"] = "Nova Subcategoria";}
+
+<h4><span class="fa fa-plus-circle"></span> <strong class="text-info">@ViewData["Title"]</strong></h4>
+
+<hr />
+
+<form asp-action="Create">
+    <div class="card">
+        <h6 class="card-header"><span class="fa fa-info-circle"></span> <strong class="text-info">Informações da categoria</strong></h6>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label asp-for="CategoriaId" class="control-label"></label>
+                    <select asp-for="CategoriaId" class="form-control" asp-items="@(new SelectList(Model.Categorias,"Id","Nome"))">
+                        <option value="">-- Selecione uma opção --</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Ativo" checked="checked" /> @Html.DisplayNameFor(model => model.Ativo)
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <partial name="_ButtonsCustomizadoSalvarVoltar" />
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

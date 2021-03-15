@@ -1,0 +1,62 @@
+﻿@model EducadorFinanceiro.App.ViewModels.FavorecidoViewModel
+
+@{ ViewData["Title"] = "Novo Favorecido";}
+
+<h4><span class="fa fa-plus-circle"></span> <strong class="text-info">@ViewData["Title"]</strong></h4>
+
+<hr />
+
+<form asp-action="Create">
+    <div class="card">
+        <h6 class="card-header"><span class="fa fa-info-circle"></span> <strong class="text-info">Informações do favorecido</strong></h6>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label asp-for="TipoFavorecido" class="control-label"></label><br />
+
+                    <div class="custom-control custom-radio">
+                        <input asp-for="TipoFavorecido" value="1" id="rdbTipoFavorecidoPF" name="tipoPessoa" type="radio" class="custom-control-input" checked>
+                        <label class="custom-control-label" for="rdbTipoFavorecidoPF">Pessoa Física</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input asp-for="TipoFavorecido" value="2" id="rdbTipoFavorecidoPJ" name="tipoPessoa" type="radio" class="custom-control-input">
+                        <label class="custom-control-label" for="rdbTipoFavorecidoPJ">Pessoa Jurídica</label>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="Documento" class="control-label"></label>
+                    <input id="txtDocumento" asp-for="Documento" class="form-control" />
+                    <span asp-validation-for="Documento" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="NomeFantasia" class="control-label"></label>
+                    <input asp-for="NomeFantasia" class="form-control" />
+                    <span asp-validation-for="NomeFantasia" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="RazaoSocial" class="control-label"></label>
+                    <input asp-for="RazaoSocial" class="form-control" />
+                    <span asp-validation-for="RazaoSocial" class="text-danger"></span>
+                </div>
+
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" asp-for="Ativo" checked>
+                    <label class="custom-control-label" for="Ativo">@Html.DisplayNameFor(model => model.Ativo)</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <partial name="_ButtonsCustomizadoSalvarVoltar" />
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

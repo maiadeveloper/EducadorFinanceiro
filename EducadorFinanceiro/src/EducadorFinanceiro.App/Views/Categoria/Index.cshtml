@@ -1,0 +1,48 @@
+﻿@model IEnumerable<EducadorFinanceiro.App.ViewModels.CategoriaViewModel>
+@using EducadorFinanceiro.App.Extensions
+
+@{ViewData["Title"] = "Categorias";}
+
+<partial name="_ButtonCustomizadoNovoRegistro">
+    <div class="card">
+        <h6 class="card-header"><span class="fa fa-list"></span><strong class="text-info"> @ViewData["Title"]</strong></h6>
+        <div class="card-body">
+            <table id="dataTableCategorias" class="table table-responsive-lg table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TipoCategoria)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Ativo)
+                        </th>
+                        <th class="text-right">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TipoCategoria)
+                            </td>
+                            <td>
+                                @this.ExibiSituacaoAtivoOuDesativo(item.Ativo)
+                            </td>
+                            <td class="text-right">
+                                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Clique para editar"><span class="fa fa-pencil-alt"></span></a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Clique para mais detalhes"><span class="fa fa-search"></span></a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Clique para remover"><span class="fa fa-trash-alt"></span></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>

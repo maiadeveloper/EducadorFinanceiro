@@ -1,0 +1,50 @@
+﻿@{ ViewData["Title"] = "Resumo de Lançamentos";}
+
+<div class="card">
+    <h6 class="card-header"><span class="fa fa-chart-bar"></span><strong class="text-info"> @ViewData["Title"]</strong></h6>
+    <div class="card-body">
+        <div class="form-inline">
+            <div class="form-group row">
+                <label for="txtDataInicial" class="col-sm-2 col-form-label">Data Inicial</label>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control" id="txtDataInicial" autofocus>
+                </div>
+                <label for="txtDataFim" class="col-sm-2 col-form-label">Data Fim</label>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control" id="txtDataFim">
+                </div>
+            </div>
+            <label class="col-sm-1 col-form-label"></label>
+            <button id="btnConsultarSaldo" class="btn btn-info"><span class="fa fa-search"></span> Consultar</button>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div id="boxload" class="text-center">
+    <span class="fa fa-spinner fa-pulse fa-4x fa-fw"></span>
+</div>
+
+<div id="boxResultados" class="card-group">
+    <div class="card border-danger">
+        <div class="card-header bg-danger"><strong>Despesa</strong></div>
+        <div class="card-body text-danger">
+            <h5 class="card-title"><span id="lblTotalDespesa"></span></h5>
+        </div>
+    </div>
+
+    <div class="card border-info">
+        <div class="card-header bg-info"><strong>Receita</strong></div>
+        <div class="card-body text-info">
+            <h5 class="card-title"><span id="lblTotalReceita"></span></h5>
+        </div>
+    </div>
+
+    <div class="card border-success">
+        <div class="card-header bg-success"><strong>Saldo</strong></div>
+        <div class="card-body text-success">
+            <h5 class="card-title"><span id="lblTotalSaldo"></span></h5>
+        </div>
+    </div>
+</div>

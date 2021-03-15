@@ -1,0 +1,86 @@
+﻿@model EducadorFinanceiro.App.ViewModels.LancamentoViewModel
+
+@{ ViewData["Title"] = "Editar Lançamento";}
+
+<h4><span class="fa fa-plus-circle"></span> <strong class="text-info">@ViewData["Title"]</strong></h4>
+
+<hr />
+
+<form asp-action="Create">
+    <div class="card">
+        <h6 class="card-header"><span class="fa fa-info-circle"></span> <strong class="text-info">Informações do lançamento</strong></h6>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label asp-for="FavorecidoId" class="control-label"></label>
+                    <select asp-for="FavorecidoId" class="form-control" asp-items="ViewBag.FavorecidoId">
+                        <option value="">-- Selecione uma opção --</option>
+                    </select>
+                    <span asp-validation-for="FavorecidoId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="CategoriaId" class="control-label"></label>
+                    <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId">
+                        <option value="">-- Selecione uma opção --</option>
+                    </select>
+                    <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="SubCategoriaId" class="control-label"></label>
+                    <select asp-for="SubCategoriaId" class="form-control" asp-items="ViewBag.SubCategoriaId">
+                        <option value="">-- Selecione uma opção --</option>
+                    </select>
+                    <span asp-validation-for="SubCategoriaId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="Descricao" class="control-label"></label>
+                    <input asp-for="Descricao" class="form-control" placeholder="Digite a descrição sobre a despesa ou receita" />
+                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="DataVencimento" class="control-label"></label>
+                    <input asp-for="DataVencimento" class="form-control" />
+                    <span asp-validation-for="DataVencimento" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="QtdeParcela" class="control-label"></label>
+                    <input type="number" asp-for="QtdeParcela" value="0" class="form-control"
+                           data-toggle="tooltip"
+                           data-placement="top"
+                           title="Se desejar gerar futuras parcelas com o mesmo valor basta informar a quantidade desejada" />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Valor" class="control-label"></label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-append">
+                            <span class="input-group-text">R$</span>
+                        </div>
+                        <input asp-for="Valor" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Valor" class="text-danger"></span>
+                </div>
+
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" asp-for="Status">
+                    <label class="custom-control-label" for="Status">@Html.DisplayNameFor(model => model.Status)</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <partial name="_ButtonsCustomizadoSalvarVoltar" />
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,17 @@
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\bin\Debug\netcoreapp3.1\EducadorFinanceiro.Business.deps.json
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\bin\Debug\netcoreapp3.1\EducadorFinanceiro.Business.dll
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\bin\Debug\netcoreapp3.1\EducadorFinanceiro.Business.pdb
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.AssemblyInfo.cs
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.dll
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.pdb
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Modelo de Aplicação AspNetMvcCore\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\bin\Debug\netcoreapp3.1\EducadorFinanceiro.Business.deps.json
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\bin\Debug\netcoreapp3.1\EducadorFinanceiro.Business.dll
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\bin\Debug\netcoreapp3.1\EducadorFinanceiro.Business.pdb
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.AssemblyInfo.cs
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.dll
+C:\Users\USER\Desktop\Aplicação AspNetMvcCore_2020\EducadorFinanceiro\src\EducadorFinanceiro.Business\obj\Debug\netcoreapp3.1\EducadorFinanceiro.Business.pdb

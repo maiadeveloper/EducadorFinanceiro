@@ -1,0 +1,61 @@
+﻿@model IEnumerable<EducadorFinanceiro.App.ViewModels.LancamentoViewModel>
+@using EducadorFinanceiro.App.Extensions
+
+@{ViewData["Title"] = "Meus Lançamentos";}
+
+<partial name="_ButtonCustomizadoNovoRegistro">
+
+    <div class="card">
+        <h6 class="card-header"><span class="fa fa-gra"></span><strong class="text-info"> @ViewData["Title"]</strong></h6>
+        <div class="card-body">
+            <table id="dataTableLancamentos" class="table table-responsive-lg table-hover table-striped" style="font-size:13px;">
+                <thead>
+                    <tr>
+                        <th>
+                            Vencimento
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Descricao)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Valor)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Favorecido)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SubCategoria.Categoria)
+                        </th>
+                        <th class="text-center" style="width:120px;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                @this.FormatarData(item.DataVencimento.ToString())
+                            </td>
+                            <td>
+                                @this.FormatarDescricaoTrim(item.Descricao)
+                            </td>
+                            <td>
+                                @this.FormatarMoeda(item.Valor)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Favorecido.NomeFantasia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SubCategoria.Categoria.Nome)
+                            </td>
+                            <td class="text-center">
+                                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Clique para editar"><span class="fa fa-pencil-alt"></span></a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Clique para mais detalhes"><span class="fa fa-search"></span></a>
+                                <a class="btn btn-danger" supress-by-claim-name="Lancamento" supress-by-claim-value="Excluir" asp-action="Delete" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Clique para remover"><span class="fa fa-trash-alt"></span></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
